@@ -1,0 +1,170 @@
+:root {
+    --bg-color: #fdfaf6; /* Warm Cream */
+    --text-color: #4a4238; /* Soft Charcoal/Brown */
+    --accent-color: #d4a373; /* Muted Wood/Honey */
+    --nav-bg: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10%;
+    background: var(--nav-bg);
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li a:hover, .active {
+    color: var(--accent-color);
+}
+
+/* Home Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 10%;
+    text-align: center;
+}
+
+.featured-img {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px; /* Slight roundness for "cozy" feel */
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Food Page */
+.food-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.food-post {
+    margin-bottom: 5rem;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.food-post img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.food-info {
+    padding: 1.5rem 0;
+}
+
+.settings {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 10%;
+}
+
+.thumbnail {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.thumbnail:hover img {
+    transform: scale(1.03);
+}
+
+.settings-data { display: none; }
+
+/* Modal Design */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(253, 250, 246, 0.98); /* Cozy cream overlay */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+}
+
+#caption {
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
