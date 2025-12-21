@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portraits | Richard's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">Richard's Portfolio</a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="portraits.html" class="active">Portraits</a></li>
+            <li><a href="scenery.html">Scenery</a></li>
+            <li><a href="misc.html">Misc</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="gallery-grid fade-in">
+        <div class="thumbnail" onclick="openModal(this)">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Portrait 1">
+            <div class="settings-data">ISO 200 | f/1.8 | 1/500s</div>
+        </div>
+        <div class="thumbnail" onclick="openModal(this)">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04" alt="Portrait 2">
+            <div class="settings-data">ISO 400 | f/2.0 | 1/250s</div>
+        </div>
+    </main>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

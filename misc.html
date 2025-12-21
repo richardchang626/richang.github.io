@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misc | Richard's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">Richard's Portfolio</a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="portraits.html">Portraits</a></li>
+            <li><a href="scenery.html">Scenery</a></li>
+            <li><a href="misc.html" class="active">Misc</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="gallery-grid fade-in">
+        <div class="thumbnail" onclick="openModal(this)">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" alt="Camera Gear">
+            <div class="settings-data">ISO 800 | f/2.8 | 1/100s</div>
+        </div>
+        <div class="thumbnail" onclick="openModal(this)">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Coffee Shop">
+            <div class="settings-data">ISO 400 | f/1.4 | 1/80s</div>
+        </div>
+    </main>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

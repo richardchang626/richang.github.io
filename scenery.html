@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenery | Richard's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">Richard's Portfolio</a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="portraits.html">Portraits</a></li>
+            <li><a href="scenery.html" class="active">Scenery</a></li>
+            <li><a href="misc.html">Misc</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="gallery-grid fade-in">
+        <div class="thumbnail" onclick="openModal(this)">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Mountain Scenery">
+            <div class="settings-data">ISO 100 | f/8.0 | 1/125s</div>
+        </div>
+        <div class="thumbnail" onclick="openModal(this)">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Forest Path">
+            <div class="settings-data">ISO 200 | f/4.5 | 1/60s</div>
+        </div>
+    </main>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
