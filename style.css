@@ -255,3 +255,15 @@ nav ul li a:hover, .active {
 .logo a:hover {
     color: var(--accent-color); /* Changes to wood/honey color on hover */
 }
+
+/* New class specifically for your portrait-style About photo */
+.featured-img-portrait {
+    width: 100%;
+    max-width: 450px; /* Keeps it from being too massive on desktop */
+    height: auto;     /* Allows the full height of your head/body to show */
+    display: block;
+    margin: 0 auto 2rem auto; /* Centers the image */
+    border-radius: 8px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
+}
